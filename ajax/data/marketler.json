@@ -1,0 +1,355 @@
+{
+    "data": [
+        {
+            "id": "1",
+            "isim": "Halal Dünya Marketleri Aksaray Merkez Şubesi",
+            "adres": "\n                                Kılıçarslan Mah. 1344. Sk. No:34 Merkez / AKSARAY \n\n                                Merkez-Aksaray/Türkiye\n                            ",
+            "il": "AKSARAY",
+            "ilçe": "Merkez",
+            "sorumlu": " Mücahid Mutlu",
+            "telefon": [
+                " (507) 434-6647",
+                " (382) 213-0908"
+            ]
+        },
+        {
+            "id": "2",
+            "isim": "Halal Dünya Marketleri Ankara Demetevler Şubesi",
+            "adres": "\n                                ÖZEVLER MAH. İVEDİK CAD.  938.SOK. NO:10/C \nElif Sitesi Karşısı \n                                Yenimahalle-Ankara/Türkiye\n                            ",
+            "il": "Ankara",
+            "ilçe": "Demetevler",
+            "sorumlu": " MEHMED TOPÇU",
+            "telefon": [
+                " (312) 345-7495"
+            ]
+        },
+        {"id": "3",
+            "isim": "Halal Dünya Marketleri Ankara Etlik Şubesi",
+            "adres": "\n                                ADNAN YÜKSEL CAD. NO: 3/D \n(OSMANLI İŞ MERKEZİ ARKASI) ETLİK \n                                Keçiören-Ankara/Türkiye\n                            ",
+            "il": "Ankara",
+            "ilçe": "ETLİK",
+            "sorumlu": " MEHMED TOPÇU",
+            "telefon": [
+                " (312) 322-2235"
+            ]
+        },
+        {
+            "id": "4",
+            "isim": "Halal Dünya Marketleri Ankara Sincan Şubesi",
+            "adres": "\n                                Maraşal Çakmak Mah. Polatlı 2 Cadde 24. Sokak No:19/A Sincan/ANKARA \n\n                                Sincan-Ankara/Türkiye\n                            ",
+            "il": "Ankara",
+            "ilçe": "Sincan",
+            "sorumlu": " Serkan Yıldızoğlu",
+            "telefon": [
+                " (541) 910-1128",
+                " (312) 270-3536"
+            ]
+        },
+        {
+            "id": "5",
+            "isim": "Halal Dünya Marketleri Antalya Şubesi",
+            "adres": "\n                                Kazım Karabekir Cad. Güvenlik Mah. Büyük Baylı Apt. No:122/B \n\n                                Muratpaşa-Antalya/Türkiye\n                            ",
+            "il": "Antalya",
+            "ilçe": "",
+            "sorumlu": " İLHAM BEKLEVİŞ",
+            "telefon": [
+                " (535) 332-3311"
+            ]
+        },
+        {
+            "id": "6",
+            "isim": "Halal Dünya Marketleri Bursa Nilüfer Şubesi",
+            "adres": "\n                                BEŞEVLER MAHALLESİ YILDIRIM CADDESİ NO:145/1A \n\n                                Nilüfer-Bursa/Türkiye\n                            ",
+            "il": "Bursa",
+            "ilçe": "Nilüfer",
+            "sorumlu": " ABDULLAH BAYDAR",
+            "telefon": [
+                " (224) 451-5060",
+                " (532) 157-1307"
+            ]
+        },
+        {
+            "id": "7",
+            "isim": "Halal Dünya Marketleri Bursa Osmangazi Şubesi",
+            "adres": "\n                                Elmas bahçeler mahalllesi, 3. yüksel sokak, no:38/A Osmangazi Bursa \n\n                                Osmangazi-Bursa/Türkiye\n                            ",
+            "il": "Bursa",
+            "ilçe": "Osmangazi",
+            "sorumlu": " Muharrem Şenol Özkul",
+            "telefon": [
+                " (533) 651-3273",
+                " (224) 251-8786"
+            ]
+        },
+        {
+            "id": "8",
+            "isim": "Halal Dünya Marketleri Bursa Yıldırım Şubesi",
+            "adres": "\n                                Bağlaraltı Mah.415. Sok. No:16-18A Yıldırım/Bursa \n\n                                Yıldırım-Bursa/Türkiye\n                            ",
+            "il": "Bursa",
+            "ilçe": "",
+            "sorumlu": " KADİR TAŞÇEKEN",
+            "telefon": [
+                " (537) 945-1240",
+                " (224) 448-2260"
+            ]
+        },
+        {
+            "id": "9",
+            "isim": "Halal Dünya Marketleri Düzce Şubesi",
+            "adres": "\n                                Nusrettin Mahallesi Süleyman Nafiz Sokak No:1 \nFettah Bey tarlası Bolu Caddesi Yunus Market karşısı \n                                Merkez-Düzce/Türkiye\n                            ",
+            "il": "Düzce",
+            "ilçe": "",
+            "sorumlu": " NİMET YAVUZ",
+            "telefon": [
+                " (552) 475-9890"
+            ]
+        },
+        {"id": "10",
+            "isim": "Halal Dünya Marketleri Erzincan Şubesi",
+            "adres": "\n                                Mekke Medine Pazarı Atatürk Mah. Nermi Tombul Cad. No:42/B (Şemsettin Uçar Külliyesi Altı) \n\n                                Merkez-Erzincan/Türkiye\n                            ",
+            "il": "Erzincan",
+            "ilçe": "",
+            "sorumlu": " DAVUT KESKİN",
+            "telefon": [
+                " (553) 630-7760"
+            ]
+        },
+        {
+            "id": "11",
+            "isim": "Halal Dünya Marketleri Gaziantep Şehitkamil Şubesi",
+            "adres": "\n                                PİRSULTAN MAH. 65. SOKAK NO:50 ŞEHİTKAMİL \nŞEHİT KAMİL DEVLET HAS.CİVARI \n                                Şehitkamil-Gaziantep/Türkiye\n                            ",
+            "il": "Gaziantep",
+            "ilçe": "",
+            "sorumlu": " VEDAT KANAR",
+            "telefon": [
+                " (342) 324 74 75",
+                " (536) 705 18 00"
+            ]
+        },
+        {
+            "id": "12",
+            "isim": "Halal Dünya Marketleri Isparta Şubesi",
+            "adres": "\n                                GAZİ KEMAL MAH. 121. CAD. NO:18 \nMÜFTÜLÜK İLERİSİ \n                                Merkez-Isparta/Türkiye\n                            ",
+            "il": "Isparta",
+            "ilçe": "",
+            "sorumlu": " AHMED ÇELİK",
+            "telefon": [
+                " (246) 222-2442",
+                " (538) 580-5304"
+            ]
+        },
+        {
+            "id": "13",
+            "isim": "Halal Dünya Marketleri İstanbul Bağcılar Şubesi",
+            "adres": "\n                                Sancaktepe Mah. 924.Sokak No:21 \n(SANCAKTEPE MUHTARLIĞI YANI) \n                                Bağcılar-İstanbul/Türkiye\n                            ",
+            "il": "İstanbul",
+            "ilçe": "Bağcılar",
+            "sorumlu": " Hüseyin Yılmaz",
+            "telefon": [
+                " (533) 510-2650"
+            ]
+        },
+        {
+            "id": "14",
+            "isim": "Halal Dünya Marketleri İstanbul Başakşehir Şubesi",
+            "adres": "\n                                BAŞAKŞEHİR 1.ETAP YÜRÜYÜŞ YOLU\n LİFE PARK İŞ YERLERİ NO:40 \n\n                                Başakşehir-İstanbul/Türkiye\n                            ",
+            "il": "İstanbul",
+            "ilçe": "Başakşehir",
+            "sorumlu": " ÖNER BULUT",
+            "telefon": [
+                " (532) 371 37 33",
+                " (212) 485 55 35"
+            ]
+        },
+        {
+            "id": "15",
+            "isim": "Halal Dünya Marketleri İstanbul Beylikdüzü şubesi",
+            "adres": "\n                                Kavaklı Mah. İbrahim Müteferrika Cad. No:27/2 Beylikdüzü/İstanbul \n\n                                Beylikdüzü-İstanbul/Türkiye\n                            ",
+            "il": "İstanbul",
+            "ilçe": "Beylikdüzü",
+            "sorumlu": " Abdullah Gür",
+            "telefon": [
+                " (505) 452-1373"
+            ]
+        },
+        {
+            "id": "16",
+            "isim": "Halal Dünya Marketleri İstanbul Çekmeköy Şubesi",
+            "adres": "\n                                Madenler Mah. Arafat Cad. No:10/A  Ümraniye/İstanbul \n\n                                Ümraniye-İstanbul/Türkiye\n                            ",
+            "il": "İstanbul",
+            "ilçe": "Çekmeköy",
+            "sorumlu": " Musa Kahraman",
+            "telefon": [
+                " (532) 491-4391"
+            ]
+        },
+        {
+            "id": "17",
+            "isim": "Halal Dünya Marketleri İstanbul Sefaköy Şubesi",
+            "adres": "\n                                Kemalpaşa Mah .Bağlar Cad. No:42/A Sefaköy-Küçükçekmece/İstanbul \n\n                                Küçükçekmece-İstanbul/Türkiye\n                            ",
+            "il": "İstanbul",
+            "ilçe": "Sefaköy",
+            "sorumlu": " İMRAN ELEMİN",
+            "telefon": [
+                " (554) 150-5510"
+            ]
+        },
+        {
+            "id": "18",
+            "isim": "Halal Dünya Marketleri İstanbul Sultanbeyli Şubesi",
+            "adres": "\n                                MEHMET AKİF ERSOY MAH. GÜN CAD. NO:26/A \n\n                                Sultanbeyli-İstanbul/Türkiye\n                            ",
+            "il": "İstanbul",
+            "ilçe": "Sultanbeyli",
+            "sorumlu": " HÜSEYİN YILMAZ",
+            "telefon": [
+                " (534) 354-1823"
+            ]
+        },
+        {
+            "id": "19",
+            "isim": "Halal Dünya Marketleri İstanbul Sultangazi Şubesi",
+            "adres": "\n                                SULTANÇİFTLİĞİ MAH. ORDU CAD. 195.Sokak No.51 \nLASTİKÇİ DURAĞI \n                                Sultangazi-İstanbul/Türkiye\n                            ",
+            "il": "İstanbul",
+            "ilçe": "Sultangazi",
+            "sorumlu": " AHMED DEMİREL",
+            "telefon": [
+                " (536) 647-9559"
+            ]
+        },
+        {
+            "id": "20",
+            "isim": "Halal Dünya Marketleri İstanbul Sultangazi Şubesi-2",
+            "adres": "\n                                Uğur Mumcu Mah. L Cad. No:13 Sultangazi/İSTANBUL \n\n                                Sultangazi-İstanbul/Türkiye\n                            ",
+            "il": "İstanbul",
+            "ilçe": "Sultangazi",
+            "sorumlu": " Ahmed Demirel",
+            "telefon": [
+                " (536) 647-9559"
+            ]
+        },
+        {
+            "id": "21",
+            "isim": "Halal Dünya Marketleri İstanbul Zeytinburnu Şubesi",
+            "adres": "\n                                NURİ PAŞA MAH. SEBAHATTİN ZEREN SOK. NO: 2/3A\nZEYTİNBURNU/İSTANBUL \n\n                                Zeytinburnu-İstanbul/Türkiye\n                            ",
+            "il": "İstanbul",
+            "ilçe": "Zeytinburnu",
+            "sorumlu": " Abdulhekim Sabırlı",
+            "telefon": [
+                " (539) 387-3899",
+                " (212) 877-1596"
+            ]
+        },
+        {
+            "id": "22",
+            "isim": "Halal Dünya Marketleri İzmir Şubesi",
+            "adres": "\n                                Fırat Mah.287/3 Sok. No:15/A Buca/İZMİR \n12 nolu sağlık ocağı yanı bilali habeşi camii karşısı \n                                Buca-İzmir/Türkiye\n                            ",
+            "il": "İzmir",
+            "ilçe": "Buca",
+            "sorumlu": " SELÇUK MERT YALÇIN",
+            "telefon": [
+                " (544) 594-4008"
+            ]
+        },
+        {
+            "id": "23",
+            "isim": "Halal Dünya Marketleri Kahramanmaraş Onikişubat Şubesi",
+            "adres": "\n                                ŞEHİT ABDULLAH ÇAVUŞ MAH. 66016 SOK.BEGONYA AP.NO:10/A ONİKİŞUBAT / KAHRAMANMARAŞ \n\n                                Merkez-Kahramanmaraş/Türkiye\n                            ",
+            "il": "Kahramanmaraş",
+            "ilçe": "",
+            "sorumlu": " EJDER AYDOĞAN",
+            "telefon": [
+                " (535) 338-2904"
+            ]
+        },
+        {
+            "id": "24",
+            "isim": "Halal Dünya Marketleri Kayseri Şubesi",
+            "adres": "\n                                Gülük Mah. Şehit Miralay Nazım Bey Bulvarı No:44/A \n\n                                Melikgazi-Kayseri/Türkiye\n                            ",
+            "il": "Kayseri",
+            "ilçe": "Melikgazi",
+            "sorumlu": " HALİL DURSUN",
+            "telefon": [
+                " (535) 978-5121",
+                " (352) 320-7050"
+            ]
+        },
+        {
+            "id": "25",
+            "isim": "Halal Dünya Marketleri Konya Karatay Şubesi",
+            "adres": "\n                                NAKİPOĞLU MAH. KÖPRÜBAŞI CAD.\nNO:17/A \nKaratay Katlı Otoparkının Karşısı \n                                Karatay-Konya/Türkiye\n                            ",
+            "il": "Konya",
+            "ilçe": "Karatay",
+            "sorumlu": " HASAN ASİ",
+            "telefon": [
+                " (332) 353-0443",
+                " (506) 216-6995"
+            ]
+        },
+        {
+            "id": "26",
+            "isim": "Halal Dünya Marketleri Konya Selçuklu Şube",
+            "adres": "\n                                Yazır Mah. Gülvatan Sok.15/L  (yazır otobüs durağı civarı,kanyon parkı karşısı) \n\n                                Selçuklu-Konya/Türkiye\n                            ",
+            "il": "Konya",
+            "ilçe": "Selçuklu",
+            "sorumlu": " Hasan Asi",
+            "telefon": [
+                " (506) 216-6995"
+            ]
+        },
+        {
+            "id": "27",
+            "isim": "Halal Dünya Marketleri Malatya  Yeşilyurt Şubesi",
+            "adres": "\n                                TURGUT ÖZAL MAH. AHMEDİYE CAMİ KARŞISI KONTEYNER KENT ÇARŞI NO:8 YEŞİLYURT/MALATYA \n\n                                Yeşilyurt-Malatya/Türkiye\n                            ",
+            "il": "Malatya",
+            "ilçe": "Yeşilyurt",
+            "sorumlu": " MURAT DEMİRKOL",
+            "telefon": [
+                " (532) 722-1120"
+            ]
+        },
+        {
+            "id": "28",
+            "isim": "Halal Dünya Marketleri Osmaniye Şubesi",
+            "adres": "\n                                M. sinan mah 8529 sk no 19A  Merkez/Osmaniye \n\n                                Merkez-Osmaniye/Türkiye\n                            ",
+            "il": "Osmaniye",
+            "ilçe": "Merkez",
+            "sorumlu": " RAMAZAN GÖKSU",
+            "telefon": [
+                " (328) 814-8916"
+            ]
+        },
+        {
+            "id": "29",
+            "isim": "Halal Dünya Marketleri Sakarya Şubesi",
+            "adres": "\n                                ORTA MAH. 671.SOKAK NO.12/A DÜNYA İŞ MERKEZİ \nBİLGE HASTANESİ KARŞISI, ADA TAŞ SÜRÜCÜ KURSU SIRASI \n                                Adapazarı-Sakarya/Türkiye\n                            ",
+            "il": "Sakarya",
+            "ilçe": "Adapazarı",
+            "sorumlu": " MUSTAFA ŞANLI",
+            "telefon": [
+                " (264) 274 34 32",
+                " (507) 300 33 22"
+            ]
+        },
+        {
+            "id": "30",
+            "isim": "Halal Dünya Marketleri Şanlıurfa Karaköprü Şubesi",
+            "adres": "\n                                ŞENEVLER MAHALLESİ, 6122. SK., 63320 KARAKÖPRÜ / ŞANLIURFA \n\n                                Merkez-Şanlıurfa/Türkiye\n                            ",
+            "il": "ŞANLIURFA",
+            "ilçe": "",
+            "sorumlu": " CENGİZ GÜNAY",
+            "telefon": [
+                " (532) 412-7990"
+            ]
+        },
+        {
+            "id": "31",
+            "isim": "Halal Dünya Marketleri www.helaldunyamarketleri.com",
+            "adres": "\n                                https://www.helaldunyamarketleri.com \nOnline alışveriş sitesi \n                                Maltepe-İstanbul/Türkiye\n                            ",
+            "il": "İstanbul",
+            "ilçe": "Maltepe",
+            "sorumlu": " ",
+            "telefon": [
+                " (216) 706-1780"
+            ]
+        }
+    ]
+}

@@ -1,1 +1,285 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boykota Destek Veren İşletmeler</title>
+    <style>
+.flex-container {
+  display: flex;
+  flex-direction: column; 
+  border: 1px solid #999;
+  box-shadow: 1px 1px 1px 0 rgba(52,52,54,0.25);
+}
+
+#tabs {
+  margin: 0;
+  padding: 0;
+  display: inherit;
+  flex-direction: row;
+  border-bottom: 1px solid #eee;
+  
+  [data-tab] {
+    padding: 0.5em 1em;
+    list-style: none;
+    
+    a {
+      text-decoration: none;
+      color: #aaa;
+    }
+    
+    &.active {
+      border-bottom: 3px solid #2ac7e1;
+      
+      a {
+        font-weight: 700;
+        color: #2ac7e1;
+      }
+    }
+  }
+}
+
+.flex-item {
+  display: none;
+  &.active {
+    display: block;
+    padding: 1em;
+  }
+}
+    </style>
+
+  </head>
+
+  <body>
+
+
+    <div class="flex-container">
+        <ul id="tabs">
+          <li data-tab="lok" class="active">
+            <a href="#">Lokantalar</a>
+          </li>
+          <li data-tab="mar" href="#" >
+            <a href="#">Marketler</a>
+          </li>
+          <li data-tab="zin" href="#">
+            <a href="#">Zincir Marketler</a>
+          </li>
+        </ul>
+      
+        <div id="lok" class="flex-item active" >
+
+            <div class="container mt-4">
+                <table id="loktable" class="display" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Name</th>
+                            <th>Position</th>
+                            <th>Office</th>
+                            <th>Salary</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th></th>
+                            <th>Name</th>
+                            <th>Position</th>
+                            <th>Office</th>
+                            <th>Salary</th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+        <div id="mar" class="flex-item ">            
+             <div class="container mt-4">
+              <table id="marktable" class="display" style="width:100%">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>İsim</th>
+                        <th>İl</th>
+                        <th>İlçe</th>
+                        <th>Telefon</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th></th>
+                        <th>İsim</th>
+                        <th>İl</th>
+                        <th>İlçe</th>
+                        <th>Telefon</th>
+                    </tr>
+                </tfoot>
+            </table>
+             </div>
+  </div></div>
+        <div id="zin" class="flex-item">Zincir Marketler</div>
+      </div>
+      
+      
+
+
+
+
+
+
+    <!-- bootstrap5 dataTables js cdn -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdn.datatables.net/2.0.0/js/dataTables.js"></script>
+    <script src="https://cdn.datatables.net/2.0.0/css/dataTables.dataTables.css"></script>
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+    crossorigin="anonymous"
+  />
+  <!-- bootstrap5 dataTables css cdn -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap5.min.css"
+
+  />
+  <script>
+    const _tabs = document.querySelectorAll('[data-tab]');
+    const _content = document.getElementsByClassName('active');
+    
+    // -------- STEP 3 -------- //
+    const toggleContent = function() {
+      
+      // Part One
+      if (!this.classList.contains("active")) {
+        
+        Array.from(_content).forEach( item => {
+          item.classList.remove('active');
+        });
+        
+        this.classList.add('active');
+        
+        // Part Two
+        let currentTab = this.getAttribute('data-tab'),
+           _tabContent = document.getElementById(currentTab);
+           _tabContent.classList.add('active');
+      }
+    };
+    
+    // -------- STEP 2 -------- //
+    Array.from(_tabs).forEach( item => {
+      item.addEventListener('click', toggleContent);
+    });
+        </script>
+    <script>
+function format0(d) {
+    // `d` is the original data object for the row
+    return (
+        '<dl>' +
+        '<dt>Full name:</dt>' +
+        '<dd>' +
+        d.name +
+        '</dd>' +
+        '<dt>Extension number:</dt>' +
+        '<dd>' +
+        d.extn +
+        '</dd>' +
+        '<dt>Extra info:</dt>' +
+        '<dd>And any further details here (images etc)...</dd>' +
+        '</dl>'
+    );
+}
+ 
+let table = new DataTable('#loktable', {
+    ajax: '../ajax/data/objects.txt',
+    "pageLength": 50,
+    language: {
+      search: 'arama:',
+        searchPlaceholder: 'Şehir veya İşletme adı girin'
+    },
+    columns: [
+        {
+            className: 'dt-control',
+            orderable: false,
+            data: null,
+            defaultContent: ''
+        },
+        { data: 'name' },
+        { data: 'position' },
+        { data: 'office' },
+        { data: 'salary' }
+    ],
+    order: [[1, 'asc']]
+});
+ 
+// Add event listener for opening and closing details
+table.on('click', 'td.dt-control', function (e) {
+    let tr = e.target.closest('tr');
+    let row = table.row(tr);
+ 
+    if (row.child.isShown()) {
+        // This row is already open - close it
+        row.child.hide();
+    }
+    else {
+        // Open this row
+        row.child(format0(row.data())).show();
+    }
+});
+    </script>
+
+<script>
+  function formatmarket(d) {
+      // `d` is the original data object for the row
+      return (
+        '<dl>' +
+        '<dt>Adres:</dt>' +
+        '<dd>' +
+        d.adres +
+       
+        '<dt>Diğer Bilgiler:</dt>' +
+        '<dd>And any further details here (images etc)...</dd>' +
+        '</dl>'
+      );
+  }
+   
+  let tablem = new DataTable('#marktable', {
+      ajax: '../ajax/data/marketler.json',
+      "pageLength": 50,
+      language: {
+        search: 'arama:',
+          searchPlaceholder: 'Şehir veya İşletme adı girin'
+      },
+      columns: [
+          {
+              className: 'dt-control',
+              orderable: false,
+              data: null,
+              defaultContent: ''
+          },
+          { data: 'isim' },
+          { data: 'il' },
+          { data: 'ilçe' },
+          { data: 'telefon' }
+      ],
+      order: [[1, 'asc']]
+  });
+   
+  // Add event listener for opening and closing details
+  tablem.on('click', 'td.dt-control', function (e) {
+      let tr = e.target.closest('tr');
+      let row = tablem.row(tr);
+   
+      if (row.child.isShown()) {
+          // This row is already open - close it
+          row.child.hide();
+      }
+      else {
+          // Open this row
+          row.child(formatmarket(row.data())).show();
+      }
+  });
+      </script>
+
+
+  </body>
+</html>
