@@ -1,0 +1,16 @@
+{
+    "data": [
+        {
+            "id": "1",
+            "türü":"Kafe",
+            "isim": "ARAF KÖZDE KAHVE",
+            "adres": "Bulgurlu, Şura Sk. No:16 D:18, 34696 Üsküdar/İstanbul",
+            "il": "İstanbul",
+            "ilçe": "Üsküdar",
+            "sorumlu": "Abdulmuttalip Kökten",
+            "telefon": [
+            ],
+            "bilgi":""
+        }
+    ]
+}

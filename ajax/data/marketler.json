@@ -350,6 +350,19 @@
             "telefon": [
                 " (216) 706-1780"
             ]
+        },
+        {
+            "id": "32",
+            "isim": "Reyhani Market",
+            "adres": "Büyükkayacık, Eski Ankara Cd. 23 A, 42250 Büyükkayacık Osb/Selçuklu/Konya",
+            "il": "Konya",
+            "ilçe": "Selçuklu",
+            "sorumlu": " ",
+            "telefon": [
+                "+90 553 347 94 76"
+            ],
+            "bilgi":"telefon ve watsappdan broşür istenebilir.\nKonya içi 2000 tl üzeri alışverişlerde ücretsiz teslimat.\n Türkiyenin heryerine kargo mevcut."
+            
         }
     ]
 }

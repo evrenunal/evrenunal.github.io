@@ -62,8 +62,8 @@
           <li data-tab="mar" href="#" >
             <a href="#">Marketler</a>
           </li>
-          <li data-tab="zin" href="#">
-            <a href="#">Zincir Marketler</a>
+          <li data-tab="dig" href="#">
+            <a href="#">Diğer İşletmeler</a>
           </li>
         </ul>
       
@@ -116,7 +116,32 @@
             </table>
              </div>
   </div></div>
-        <div id="zin" class="flex-item">Zincir Marketler</div>
+        <div id="dig" class="flex-item">
+          <div class="container mt-4">
+            <table id="digtable" class="display" style="width:100%">
+              <thead>
+                  <tr>
+                      <th></th>
+                      <th>türü</th>
+                      <th>İsim</th>
+                      <th>İl</th>
+                      <th>İlçe</th>
+                      <th>Telefon</th>
+                  </tr>
+              </thead>
+              <tfoot>
+                  <tr>
+                      <th></th>
+                      <th>türü</th>
+                      <th>İsim</th>
+                      <th>İl</th>
+                      <th>İlçe</th>
+                      <th>Telefon</th>
+                  </tr>
+              </tfoot>
+          </table>
+           </div>
+        </div>
       </div>
       
       
@@ -171,7 +196,7 @@
     });
         </script>
  
-<script>
+ <script>
   function formatmarket(d) {
       // `d` is the original data object for the row
       return (
@@ -181,7 +206,7 @@
         d.adres +
        
         '<dt>Diğer Bilgiler:</dt>' +
-        '<dd>And any further details here (images etc)...</dd>' +
+        '<dd>'+ d.bilgi +'</dd>' +
         '</dl>'
       );
   }
@@ -220,6 +245,60 @@
       else {
           // Open this row
           row.child(formatmarket(row.data())).show();
+      }
+  });
+      </script>
+
+<script>
+  function formatdiger(d) {
+      // `d` is the original data object for the row
+      return (
+        '<dl>' +
+        '<dt>Adres:</dt>' +
+        '<dd>' +
+        d.adres +
+       
+        '<dt>Diğer Bilgiler:</dt>' +
+        '<dd>'+ d.bilgi +'</dd>' +
+        '</dl>'
+      );
+  }
+   
+  let tabled = new DataTable('#digtable', {
+      ajax: '../ajax/data/digerleri.json',
+      "pageLength": 50,
+      language: {
+        search: 'arama:',
+          searchPlaceholder: 'Şehir veya işletme türü girin'
+      },
+      columns: [
+          {
+              className: 'dt-control',
+              orderable: false,
+              data: null,
+              defaultContent: ''
+          }, 
+          { data: 'türü' },
+          { data: 'isim' },
+          { data: 'il' },
+          { data: 'ilçe' },
+          { data: 'telefon' }
+      ],
+      order: [[1, 'asc']]
+  });
+   
+  // Add event listener for opening and closing details
+  tabled.on('click', 'td.dt-control', function (e) {
+      let tr = e.target.closest('tr');
+      let row = tabled.row(tr);
+   
+      if (row.child.isShown()) {
+          // This row is already open - close it
+          row.child.hide();
+      }
+      else {
+          // Open this row
+          row.child(formatdiger(row.data())).show();
       }
   });
       </script>
