@@ -1,10 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- https://www.gyrocode.com/articles/jquery-datatables-how-to-expand-collapse-all-child-rows/ -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Boykota Destek Veren İşletmeler</title>
+     
+    <link href="https://cdn.datatables.net/2.0.1/css/dataTables.dataTables.css" rel="stylesheet"  >
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdn.datatables.net/2.0.1/js/dataTables.js"></script>
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+        crossorigin="anonymous"      />
+      <!-- bootstrap5 dataTables css cdn -->
     <style>
 .flex-container {
   display: flex;
@@ -48,7 +59,137 @@
   }
 }
     </style>
+<style>
+  td.details-control {
+      background: url('https://cdn.rawgit.com/DataTables/DataTables/6c7ada53ebc228ea9bc28b1b216e793b1825d188/examples/resources/details_open.png') no-repeat center center;
+      cursor: pointer;
+  }
+  tr.shown td.details-control {
+      background: url('https://cdn.rawgit.com/DataTables/DataTables/6c7ada53ebc228ea9bc28b1b216e793b1825d188/examples/resources/details_close.png') no-repeat center center;
+  }
+  </style>
+          
+   <script>
+            function formatmarket ( d ) {
+            // `d` is the original data object for the row
+            
+            return (
+                  '<dl>' +
+                  '<dt>Adres:</dt>' +
+                  '<dd>' +
+                  d.adres +
+                 
+                  '<dt>Diğer Bilgiler:</dt>' +
+                  '<dd>'+ d.bilgi +'</dd>' +
+                  '</dl>'
+                );
+            }
+            
+            $(document).ready(function() {
+            var tablem = $('#marktable').DataTable({
+              'ajax': '../ajax/data/marketler.json',
+              "paging": false,
+                // "pageLength": 50,
+                language: {
+                  search: 'arama:',
+                    searchPlaceholder: 'Şehir veya İşletme adı girin'
+                },
+                columns: [
+                    {
+                        className: 'details-control',
+                        orderable: false,
+                        data: null,
+                        defaultContent: ''
+                    },
+                    { data: 'isim' },
+                    { data: 'il' },
+                    { data: 'ilçe' },
+                    { data: 'telefon' }
+                ],
+                order: [[1, 'asc']]
+            } );
+            
+            // Add event listener for opening and closing details
+            $('#marktable tbody').on('click', 'td.details-control', function(){
+              var tr = $(this).closest('tr');
+              var row = tablem.row( tr );
+            
+              if(row.child.isShown()){
+                  // This row is already open - close it
+                  row.child.hide();
+                  tr.removeClass('shown');
+              } else {
+                  // Open this row
+                  row.child(formatmarket(row.data())).show();
+                  tr.addClass('shown');
+              }
+            });
+          
+            });
+       </script>
 
+<script>
+  function formatdiger ( d ) {
+  // `d` is the original data object for the row
+  
+  return (
+        '<dl>' +
+        '<dt>Adres:</dt>' +
+        '<dd>' +
+        d.adres +
+       
+        '<dt>Diğer Bilgiler:</dt>' +
+        '<dd>'+ d.bilgi +'</dd>' +
+        '</dl>'
+      );
+  }
+  
+  $(document).ready(function() {
+  var tabled = $('#digtable').DataTable({
+    'ajax': '../ajax/data/digerleri.json',
+    "paging": false,
+      // "pageLength": 50,
+      language: {
+        search: 'arama:',
+          searchPlaceholder: 'Şehir veya işletme türü girin'
+      },
+      columns: [
+          {
+              className: 'details-control',
+              orderable: false,
+              data: null,
+              defaultContent: ''
+          },
+          { data: 'türü' },
+          { data: 'isim' },
+          { data: 'il' },
+          { data: 'ilçe' },
+          { data: 'telefon' }
+      ],
+      order: [[1, 'asc']]
+  } );
+  
+  // Add event listener for opening and closing details
+  $('#digtable tbody').on('click', 'td.details-control', function(){
+    var tr = $(this).closest('tr');
+    var row = tabled.row( tr );
+  
+    if(row.child.isShown()){
+        // This row is already open - close it
+        row.child.hide();
+        tr.removeClass('shown');
+    } else {
+        // Open this row
+        row.child(formatdiger(row.data())).show();
+        tr.addClass('shown');
+    }
+  });
+
+  });
+  
+  </script>
+
+          
   </head>
 
   <body>
@@ -56,21 +197,22 @@
 
     <div class="flex-container">
         <ul id="tabs">
-          <li data-tab="lok" class="active">
-            <a href="#">Lokantalar</a>
-          </li>
-          <li data-tab="mar" href="#" >
+          <li data-tab="mar"  class="active" >
             <a href="#">Marketler</a>
           </li>
-          <li data-tab="dig" href="#">
+          <li data-tab="lok">
+            <a href="#">Lokantalar</a>
+          </li>
+        
+          <li data-tab="dig" >
             <a href="#">Diğer İşletmeler</a>
           </li>
         </ul>
       
-        <div id="lok" class="flex-item active" >
+        <div id="lok" class="flex-item display " >
 
             <div class="container mt-4">
-                <table id="loktable" class="display" style="width:100%">
+                <table id="loktable" class="display"  style="width:100%">
                   <thead>
                     <tr>
                         <th></th>
@@ -92,9 +234,10 @@
                 </table>
             </div>
         </div>
-        <div id="mar" class="flex-item ">            
+        <div id="mar" class="flex-item active display"  cellspacing="0" width="100%">            
              <div class="container mt-4">
-              <table id="marktable" class="display" style="width:100%">
+           
+                <table id="marktable" class="display" width="100%">
                 <thead>
                     <tr>
                         <th></th>
@@ -115,8 +258,10 @@
                 </tfoot>
             </table>
              </div>
-  </div></div>
-        <div id="dig" class="flex-item">
+  </div>
+</div>
+
+  <div id="dig" class="flex-item" cellspacing="0" width="100%">
           <div class="container mt-4">
             <table id="digtable" class="display" style="width:100%">
               <thead>
@@ -145,26 +290,8 @@
       </div>
       
 
-    <!-- bootstrap5 dataTables js cdn -->
-    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-    <script src="https://cdn.datatables.net/2.0.0/js/dataTables.js"></script>
-    <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-    crossorigin="anonymous"
-  />
-  <!-- bootstrap5 dataTables css cdn -->
-  <link
-  rel="stylesheet"
-  href="https://cdn.datatables.net/2.0.0/css/dataTables.dataTables.css"
 
-/>
-  <link
-    rel="stylesheet"
-    href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap5.min.css"
-
-  />
+ 
   <script>
     const _tabs = document.querySelectorAll('[data-tab]');
     const _content = document.getElementsByClassName('active');
@@ -193,114 +320,6 @@
       item.addEventListener('click', toggleContent);
     });
         </script>
- 
- <script>
-  function formatmarket(d) {
-      // `d` is the original data object for the row
-      return (
-        '<dl>' +
-        '<dt>Adres:</dt>' +
-        '<dd>' +
-        d.adres +
-       
-        '<dt>Diğer Bilgiler:</dt>' +
-        '<dd>'+ d.bilgi +'</dd>' +
-        '</dl>'
-      );
-  }
-   
-  let tablem = new DataTable('#marktable', {
-      ajax: '../ajax/data/marketler.json',
-      "pageLength": 50,
-      language: {
-        search: 'arama:',
-          searchPlaceholder: 'Şehir veya İşletme adı girin'
-      },
-      columns: [
-          {
-              className: 'dt-control',
-              orderable: false,
-              data: null,
-              defaultContent: ''
-          },
-          { data: 'isim' },
-          { data: 'il' },
-          { data: 'ilçe' },
-          { data: 'telefon' }
-      ],
-      order: [[1, 'asc']]
-  });
-   
-  // Add event listener for opening and closing details
-  tablem.on('click', 'td.dt-control', function (e) {
-      let tr = e.target.closest('tr');
-      let row = tablem.row(tr);
-   
-      if (row.child.isShown()) {
-          // This row is already open - close it
-          row.child.hide();
-      }
-      else {
-          // Open this row
-          row.child(formatmarket(row.data())).show();
-      }
-  });
-      </script>
-
-<script>
-  function formatdiger(d) {
-      // `d` is the original data object for the row
-      return (
-        '<dl>' +
-        '<dt>Adres:</dt>' +
-        '<dd>' +
-        d.adres +
-       
-        '<dt>Diğer Bilgiler:</dt>' +
-        '<dd>'+ d.bilgi +'</dd>' +
-        '</dl>'
-      );
-  }
-   
-  let tabled = new DataTable('#digtable', {
-      ajax: '../ajax/data/digerleri.json',
-      "pageLength": 50,
-      language: {
-        search: 'arama:',
-          searchPlaceholder: 'Şehir veya işletme türü girin'
-      },
-      columns: [
-          {
-              className: 'dt-control',
-              orderable: false,
-              data: null,
-              defaultContent: ''
-          }, 
-          { data: 'türü' },
-          { data: 'isim' },
-          { data: 'il' },
-          { data: 'ilçe' },
-          { data: 'telefon' }
-      ],
-      order: [[1, 'asc']]
-  });
-   
-  // Add event listener for opening and closing details
-  tabled.on('click', 'td.dt-control', function (e) {
-      let tr = e.target.closest('tr');
-      let row = tabled.row(tr);
-   
-      if (row.child.isShown()) {
-          // This row is already open - close it
-          row.child.hide();
-      }
-      else {
-          // Open this row
-          row.child(formatdiger(row.data())).show();
-      }
-  });
-      </script>
-
 
   </body>
 </html>
