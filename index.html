@@ -24,6 +24,8 @@
   box-shadow: 1px 1px 1px 0 rgba(52,52,54,0.25);
 }
 
+
+
 #tabs {
   margin: 0;
   padding: 0;
@@ -50,6 +52,8 @@
     }
   }
 }
+
+
 
 .flex-item {
   display: none;
@@ -87,8 +91,9 @@
             
             $(document).ready(function() {
             var tablem = $('#marktable').DataTable({
-              'ajax': '../ajax/data/marketler.json',
-              "paging": false,
+              ajax: '../ajax/data/marketler.json',
+              paging: false,
+              scrollX: false,
                 // "pageLength": 50,
                 language: {
                   search: 'arama:',
@@ -195,9 +200,9 @@
   <body>
 
 
-    <div class="flex-container">
+    <div class="flex-container table-responsive">
         <ul id="tabs">
-          <li data-tab="mar"  class="active" >
+          <li data-tab="mar"  class=" active" >
             <a href="#">Marketler</a>
           </li>
           <li data-tab="lok">
@@ -209,7 +214,7 @@
           </li>
         </ul>
       
-        <div id="lok" class="flex-item display " >
+        <div id="lok" class="flex-item table-responsive " >
 
             <div class="container mt-4">
                 <table id="loktable" class="display"  style="width:100%">
@@ -234,10 +239,10 @@
                 </table>
             </div>
         </div>
-        <div id="mar" class="flex-item active display"  cellspacing="0" width="100%">            
-             <div class="container mt-4">
+        <div id="mar" class="flex-item table-responsive active "  cellspacing="0" width="100%">            
+             <div class="container mt-4 table-responsive ">
            
-                <table id="marktable" class="display" width="100%">
+                <table id="marktable" class="display" >
                 <thead>
                     <tr>
                         <th></th>
@@ -259,35 +264,35 @@
             </table>
              </div>
   </div>
+  <div id="dig" class="flex-item table-responsive " cellspacing="0" width="100%">
+    <div class="container mt-4">
+      <table id="digtable" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th></th>
+                <th>türü</th>
+                <th>İsim</th>
+                <th>İl</th>
+                <th>İlçe</th>
+                <th>Telefon</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th></th>
+                <th>türü</th>
+                <th>İsim</th>
+                <th>İl</th>
+                <th>İlçe</th>
+                <th>Telefon</th>
+            </tr>
+        </tfoot>
+    </table>
+     </div>
+  </div>
 </div>
 
-  <div id="dig" class="flex-item" cellspacing="0" width="100%">
-          <div class="container mt-4">
-            <table id="digtable" class="display" style="width:100%">
-              <thead>
-                  <tr>
-                      <th></th>
-                      <th>türü</th>
-                      <th>İsim</th>
-                      <th>İl</th>
-                      <th>İlçe</th>
-                      <th>Telefon</th>
-                  </tr>
-              </thead>
-              <tfoot>
-                  <tr>
-                      <th></th>
-                      <th>türü</th>
-                      <th>İsim</th>
-                      <th>İl</th>
-                      <th>İlçe</th>
-                      <th>Telefon</th>
-                  </tr>
-              </tfoot>
-          </table>
-           </div>
-        </div>
-      </div>
+
       
 
 
